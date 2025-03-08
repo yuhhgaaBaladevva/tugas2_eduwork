@@ -28,29 +28,50 @@
             border: 1px black solid;
         }
 
-        .header a{
+        .header a {
             border: 1px black solid;
-            background-color: grey;
+            background-color: #ddd;
             color: black;
+            padding: 5px 10px;
+            display: inline-block;
         }
 
-        /* Membuat section biodata dan portofolio di tengah */
+        /* Mengatur semua section agar tidak memiliki jarak antar bagian */
         section {
             text-align: center;
-            margin: 0px auto;
+            margin: 0 auto;
             border: 1px black solid;
-            padding: 10px;
+            padding: 20px;
         }
 
-        /* Tabel agar berada di tengah */
+        #biodata table{
+            border: none;
+        }
+
+        /* Tabel agar berada di tengah dan memberi jarak antar kotak */
         table {
             margin: 0 auto;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 15px; /* Menambahkan jarak antar kotak */
         }
 
+        #biodata table td{
+            background-color: #ddd;
+        }
         table, td, th {
             border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Mengatur gambar portofolio dan deskripsinya */
+        .portfolio-item {
+            text-align: center;
             padding: 10px;
+        }
+
+        #portofolio table{
+            border: none;
         }
     </style>
 </head>
@@ -70,15 +91,15 @@
         <div>
             <h1>Selamat Datang di Website Saya</h1>
             <p>Ini adalah contoh header dengan 2 kolom. Kolom kiri berisi teks seperti ini</p>
-
             <a href="https://www.w3schools.com/html/">Pelajari lebih lanjut</a>
         </div>
         <img src="https://www.liveandletdyehair.com/wp-content/uploads/placeholder-600x400.gif" alt="Gambar Profil" width="300">
     </header>
 
-    <!-- Section 3: Biodata dengan 6 box -->
+    <!-- Section 3: Biodata dengan 6 kotak -->
     <section id="biodata">
         <h2>About Me</h2>
+        <p>A brief introduction about myself</p>
         <table>
             <tr>
                 <td>Full Name</td>
@@ -98,14 +119,21 @@
         <h2>Portofolio</h2>
         <table>
             <tr>
-                <td><img src="https://www.imagemet.com/wp-content/uploads/2016/12/placeholder.png" alt="Project 1" width="200"></td>
-                <td><img src="https://www.imagemet.com/wp-content/uploads/2016/12/placeholder.png" alt="Project 2" width="200"></td>
-                <td><img src="https://www.imagemet.com/wp-content/uploads/2016/12/placeholder.png" alt="Project 3" width="200"></td>
-            </tr>
-            <tr>
-                <td>Proyek 1</td>
-                <td>Proyek 2</td>
-                <td>Proyek 3</td>
+                <td class="portfolio-item">
+                    <img src="https://www.imagemet.com/wp-content/uploads/2016/12/placeholder.png" alt="Project 1" width="200">
+                    <p><strong>Proyek 1</strong></p>
+                    <p>Deskripsi singkat tentang proyek pertama yang telah saya kerjakan.</p>
+                </td>
+                <td class="portfolio-item">
+                    <img src="https://www.imagemet.com/wp-content/uploads/2016/12/placeholder.png" alt="Project 2" width="200">
+                    <p><strong>Proyek 2</strong></p>
+                    <p>Deskripsi singkat tentang proyek kedua yang telah saya kerjakan.</p>
+                </td>
+                <td class="portfolio-item">
+                    <img src="https://www.imagemet.com/wp-content/uploads/2016/12/placeholder.png" alt="Project 3" width="200">
+                    <p><strong>Proyek 3</strong></p>
+                    <p>Deskripsi singkat tentang proyek ketiga yang telah saya kerjakan.</p>
+                </td>
             </tr>
         </table>
     </section>
