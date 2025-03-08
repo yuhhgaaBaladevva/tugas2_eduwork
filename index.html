@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Biodata</title>
+    <style>
+        /* Membuat menu horizontal */
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            justify-content: center;
+            background-color: #ddd;
+            border: 1px black solid;
+        }
+
+        nav ul li {
+            margin: 10px;
+        }
+
+        /* Mengatur layout untuk section 2 (judul kiri, gambar kanan) */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border: 1px black solid;
+        }
+
+        .header a{
+            border: 1px black solid;
+            background-color: grey;
+            color: black;
+        }
+
+        /* Membuat section biodata dan portofolio di tengah */
+        section {
+            text-align: center;
+            margin: 0px auto;
+            border: 1px black solid;
+            padding: 10px;
+        }
+
+        /* Tabel agar berada di tengah */
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Menu -->
+    <nav>
+        <ul>
+            <li><a href="#header">Header</a></li>
+            <li><a href="#biodata">Biodata</a></li>
+            <li><a href="#portofolio">Portofolio</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section 2: Judul di kiri, gambar di kanan -->
+    <header id="header" class="header">
+        <div>
+            <h1>Selamat Datang di Website Saya</h1>
+            <p>Ini adalah contoh header dengan 2 kolom. Kolom kiri berisi teks seperti ini</p>
+
+            <a href="https://www.w3schools.com/html/">Pelajari lebih lanjut</a>
+        </div>
+        <img src="https://www.liveandletdyehair.com/wp-content/uploads/placeholder-600x400.gif" alt="Gambar Profil" width="300">
+    </header>
+
+    <!-- Section 3: Biodata dengan 6 box -->
+    <section id="biodata">
+        <h2>About Me</h2>
+        <table>
+            <tr>
+                <td>Full Name</td>
+                <td>Education</td>
+                <td>Pekerjaan</td>
+            </tr>
+            <tr>
+                <td>Contact</td>
+                <td>Hobi</td>
+                <td>Alamat</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Section 4: Portofolio -->
+    <section id="portofolio">
+        <h2>Portofolio</h2>
+        <table>
+            <tr>
+                <td><img src="https://www.imagemet.com/wp-content/uploads/2016/12/placeholder.png" alt="Project 1" width="200"></td>
+                <td><img src="https://www.imagemet.com/wp-content/uploads/2016/12/placeholder.png" alt="Project 2" width="200"></td>
+                <td><img src="https://www.imagemet.com/wp-content/uploads/2016/12/placeholder.png" alt="Project 3" width="200"></td>
+            </tr>
+            <tr>
+                <td>Proyek 1</td>
+                <td>Proyek 2</td>
+                <td>Proyek 3</td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+</html>
