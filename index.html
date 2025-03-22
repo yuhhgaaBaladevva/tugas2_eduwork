@@ -1,83 +1,106 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Biodata</title>
     <style>
-        /* Membuat menu horizontal */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
         nav ul {
             display: flex;
             list-style: none;
             padding: 0;
             justify-content: center;
-            background-color: #ddd;
-            border: 1px black solid;
+            background-color: #007bff;
+            border-bottom: 3px solid #0056b3;
         }
 
         nav ul li {
             margin: 10px;
         }
 
-        /* Mengatur layout untuk section 2 (judul kiri, gambar kanan) */
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            border: 1px black solid;
+            background-color: #007bff;
+            color: white;
+            border-bottom: 3px solid #0056b3;
         }
 
         .header a {
-            border: 1px black solid;
-            background-color: #ddd;
-            color: black;
+            border: 2px solid white;
+            border-radius: 13px;
+            background-color: white;
+            color: #007bff;
             padding: 5px 10px;
-            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
         }
 
-        /* Mengatur semua section agar tidak memiliki jarak antar bagian */
         section {
             text-align: center;
-            margin: 0 auto;
-            border: 1px black solid;
+            margin: 20px;
             padding: 20px;
+            background-color: #e3f2fd;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        #biodata table{
-            border: none;
-        }
-
-        /* Tabel agar berada di tengah dan memberi jarak antar kotak */
-        table {
+        .biodata-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 800px;
             margin: 0 auto;
-            border-collapse: separate;
-            border-spacing: 15px; /* Menambahkan jarak antar kotak */
+            text-align: center;
         }
 
-        #biodata table td{
-            background-color: #ddd;
-        }
-        table, td, th {
-            border: 1px solid black;
+        .biodata-item {
+            background-color: #007bff;
+            color: white;
             padding: 15px;
-            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
         }
 
-        /* Mengatur gambar portofolio dan deskripsinya */
+        .biodata-item span {
+            color: #999999;
+        }
+
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
         .portfolio-item {
-            text-align: center;
+            background-color: white;
+            border-radius: 10px;
             padding: 10px;
-        }
-
-        #portofolio table{
-            border: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
-<body>
 
-    <!-- Section 1: Menu -->
+<body>
     <nav>
         <ul>
             <li><a href="#header">Header</a></li>
@@ -86,57 +109,51 @@
         </ul>
     </nav>
 
-    <!-- Section 2: Judul di kiri, gambar di kanan -->
     <header id="header" class="header">
         <div>
             <h1>Selamat Datang di Website Saya</h1>
             <p>Ini adalah contoh header dengan 2 kolom. Kolom kiri berisi teks seperti ini</p>
             <a href="https://www.w3schools.com/html/">Pelajari lebih lanjut</a>
         </div>
-        <img src="https://www.liveandletdyehair.com/wp-content/uploads/placeholder-600x400.gif" alt="Gambar Profil" width="300">
+        <img src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Gambar Profil" width="300">
     </header>
 
-    <!-- Section 3: Biodata dengan 6 kotak -->
     <section id="biodata">
         <h2>About Me</h2>
         <p>A brief introduction about myself</p>
-        <table>
-            <tr>
-                <td>Full Name</td>
-                <td>Education</td>
-                <td>Pekerjaan</td>
-            </tr>
-            <tr>
-                <td>Contact</td>
-                <td>Hobi</td>
-                <td>Alamat</td>
-            </tr>
-        </table>
+        <div class="biodata-container">
+            <div class="biodata-item">Full Name : <span>Gayuh Ageng Baladewa</span></div>
+            <div class="biodata-item">Education : <span>S1 Informatika</span></div>
+            <div class="biodata-item">Pekerjaan : <span>Programmer</span></div>
+            <div class="biodata-item">Contact : <span>gayuhageng13@gmail.com</span></div>
+            <div class="biodata-item">Hobi : <span>Ngoding</span></div>
+            <div class="biodata-item">Alamat : <span>Surabaya</span></div>
+        </div>
     </section>
 
-    <!-- Section 4: Portofolio -->
     <section id="portofolio">
         <h2>Portofolio</h2>
-        <table>
-            <tr>
-                <td class="portfolio-item">
-                    <img src="https://www.imagemet.com/wp-content/uploads/2016/12/placeholder.png" alt="Project 1" width="200">
-                    <p><strong>Proyek 1</strong></p>
-                    <p>Deskripsi proyek 1.</p>
-                </td>
-                <td class="portfolio-item">
-                    <img src="https://www.imagemet.com/wp-content/uploads/2016/12/placeholder.png" alt="Project 2" width="200">
-                    <p><strong>Proyek 2</strong></p>
-                    <p>Deskripsi proyek 2.</p>
-                </td>
-                <td class="portfolio-item">
-                    <img src="https://www.imagemet.com/wp-content/uploads/2016/12/placeholder.png" alt="Project 3" width="200">
-                    <p><strong>Proyek 3</strong></p>
-                    <p>Deskripsi proyek 3.</p>
-                </td>
-            </tr>
-        </table>
+        <div class="portfolio-container">
+            <div class="portfolio-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMz4X6DVumQ9mjBA-v3AteIziLrN4vTn6zjw&s"
+                    alt="Project 1" width="200">
+                <p><strong>Proyek 1</strong></p>
+                <p>Deskripsi proyek 1.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ21V1jodK-ldPgv6OMrz1qA2sHP03CwOXvsg&s"
+                    alt="Project 2" width="200">
+                <p><strong>Proyek 2</strong></p>
+                <p>Deskripsi proyek 2.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://mycoding.id/storage/covers/270.jpg" alt="Project 3" width="200">
+                <p><strong>Proyek 3</strong></p>
+                <p>Deskripsi proyek 3.</p>
+            </div>
+        </div>
     </section>
-
 </body>
+
 </html>
